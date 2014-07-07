@@ -1,7 +1,10 @@
 #!/bin/bash
 #
-# How to encrypt and decrypt file: http://how-to.linuxcareer.com/using-openssl-to-encrypt-messages-and-files
-# Copy password to clipboard
+## file:        passwd.sh
+## description: Copy password to clipboard. How to encrypt and decrypt file: http://how-to.linuxcareer.com/using-openssl-to-encrypt-messages-and-files
+## author:      Borysenko Roman
+## date:        Mon Jul  7 10:28:04 SGT 2014
+## version:     0.0.1
 #
 
 private_key="$HOME/.ssh/private_key.pem"
