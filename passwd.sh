@@ -10,6 +10,9 @@
 private_key="$HOME/.ssh/private_key.pem"
 passwd_file="$HOME/passwd.dat"
 
+res=$(openssl rsautl -decrypt -inkey "$private_key" -in "$passwd_file") \
+  || exit 1
+
 i=0
 while read line
 do
@@ -18,7 +21,7 @@ do
     echo -e "$i\t$line"
     i=$((i+1))
   fi
-done < <(openssl rsautl -decrypt -inkey "$private_key" -in "$passwd_file")
+done <<<"$res"
 
 echo  -n "Please enter a number: "
 read number
