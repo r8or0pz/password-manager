@@ -7,6 +7,8 @@
 ## version:     0.0.1
 #
 
+set -e
+
 private_key="$HOME/.ssh/private_key.pem"
 passwd_file="$HOME/passwd.dat"
 
