@@ -32,4 +32,4 @@ read number
   exit
 IFS=':' read -a name <<< "${data[$number]}"
 echo -n ${name[1]} | xclip -selection clipboard
-echo "You selected \"${name[0]}\""
+echo -e "You selected \"${name[0]}\".\nYou can paste your selection now."; sleep 3; reset
