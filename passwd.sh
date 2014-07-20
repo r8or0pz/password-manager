@@ -25,7 +25,8 @@ while read line
 do
   if [ ! -z "$line" ]; then
     data[$i]=$line
-    echo -e "$i\t$line"
+    IFS=':' read -a name <<< $line
+    echo -e "$i\t$name"
     i=$((i+1))
   fi
 done <<<"$res"
